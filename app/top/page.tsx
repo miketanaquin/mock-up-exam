@@ -1,18 +1,35 @@
-import Logo from '@/components/Logo'
-import { LogIn } from 'lucide-react'
+import AccessButton from '@/components/AccessButton'
+import Video from '@/components/Video'
 import React from 'react'
 
 const Top = () => {
+    const movies = [
+        {
+            title: "The Red Wedding",
+            characters: `danaerys • jon snow • cersei`,
+            url: "welcome.jpg"
+        },
+        {
+            title: "The Red Wedding",
+            characters: `danaerys • jon snow • cersei`,
+            url: "welcome.jpg"
+        }
+    ]
     return (
-        <section className='flex justify-center bg-black'>
-            <div className="container flex flex-col justify-items-center items-center py-10">
-                <h1 className='uppercase text-2xl text-[#bda626]'>Welcome to</h1>
-                <Logo className="text-6xl" />
-                <span className='text-xl my-7 text-center'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-                </span>
+        <div className="w-screen h-auto p-10 bg-neutral-900">
+            <div className="flex flex-row mb-10">
+                <h1 className='text-5xl uppercase font-extrabold text-wrap w-1/4'>
+                    top <span className='font-extralight'>videos</span>
+                </h1>
+                <div className='w-3/4 bg-[#bda626] my-4'></div>
             </div>
-        </section>
+            <div className="grid grid-cols-2 gap-8">
+                <Video items={movies} className="border-b-8 border-red-700" />
+            </div>
+            <div className="flex flex-col items-center my-20">
+                <AccessButton />
+            </div>
+        </div>
     )
 }
 

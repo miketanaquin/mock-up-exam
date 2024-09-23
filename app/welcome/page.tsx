@@ -1,12 +1,17 @@
-import Access from '@/components/AccessButton'
+import Logo from '@/components/Logo'
 import React from 'react'
 
 const Welcome = () => {
     return (
-        <div className="relative w-screen h-screen overflow-hidden">
-            <img src='/welcome.png' className='object-cover w-full h-full overflow-x-hidden' />
-            <Access className='absolute bottom-20 left-1/2 transform -translate-x-1/2' />
-        </div>
+        <section className='flex justify-center bg-black'>
+            <div className="container flex flex-col justify-items-center items-center py-10">
+                <h1 className='uppercase text-2xl text-[#bda626]'>Welcome to</h1>
+                <Logo className="text-6xl" />
+                <span className='text-xl my-7 text-center'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                </span>
+            </div>
+        </section>
     )
 }
 
