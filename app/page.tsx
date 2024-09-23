@@ -3,6 +3,7 @@ import Welcome from "./welcome/page";
 import Top from "./top/page";
 import Latest from "./latest/page";
 import Upcoming from "./upcoming/page";
+import Footer from "./footer/page";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Top />
         <Latest />
         <Upcoming />
+        <Footer />
       </main>
     </>
   );
